@@ -1,1 +1,33 @@
+<!-- views/layout.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Person Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/person">Persons</a></li>
+                <li><a href="/person/create">Add Person</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <%- body %> <!-- This is where the body content from other views will be injected -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Person Management System</p>
+    </footer>
+</body>
+</html>
 

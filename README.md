@@ -39,3 +39,44 @@ The **Person Management API** is a RESTful web service built with Node.js and Mo
    ```bash
    git clone https://github.com/your-username/person-management-api.git
    cd person-management-api
+
+2. **Install dependencies:**
+bash
+npm install
+
+3. **Create a .env file:**
+Duplicate the .env.example file and rename it to .env. Fill in the required environment variables.
+
+4. **Start the MongoDB server (if not using a cloud service):** Make sure you have MongoDB installed and running locally, or use a MongoDB service.
+
+## Run the application:
+bash
+npm start
+The server will start on http://localhost:3000 by default.
+
+## Usage
+- You can interact with the API using tools like Postman or curl.
+- Access the frontend at http://localhost:3000/person to manage persons via a web interface.
+
+## API Endpoints
+**Authentication Routes**
+- POST /auth/register: Register a new user.
+- POST /auth/login: Authenticate an existing user and obtain a JWT.
+
+**Person Routes**
+- GET /person: Retrieve a list of persons.
+- GET /person/create: Display a form to create a new person.
+- POST /person: Create a new person.
+- GET /person/edit/:id: Display a form to edit an existing person by ID.
+- PUT /person/:id: Update the person with the specified ID.
+- POST /person/delete/:id: Delete the person with the specified ID.
+- GET /person/search: Search for persons by name or mobile number.
+
+## Environment Variables
+Make sure to configure the following environment variables in your .env file:
+MONGODB_URI=mongodb://localhost:27017/person-management
+JWT_SECRET=your_secret_key
+PORT=3000
+- **MONGODB_URI:** Connection string for your MongoDB database.
+- **JWT_SECRET:** Secret key for signing JWT tokens.
+- **PORT:** The port on which the application will run.
